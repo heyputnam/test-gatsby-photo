@@ -25,11 +25,14 @@ console.log(data.allContentfulTestPictures.edges[0].node.photos[0].fluid.src)
 console.log(tryit)
 return(
     <div>
-        hi
+       
         {/* <img src={data.allContentfulTestPictures.edges[1].node.photos[0].fluid.src} alt="test" /> */}
         {data.allContentfulTestPictures.edges.map((edge) => {
     return(
-    <img key={edge.node.photos[0].fluid.src} src={edge.node.photos[0].fluid.src} alt=""/>
+    <img key={edge.node.photos[0].fluid.src} src={edge.node.photos[0].fluid.src} alt="" height='200px' width='200px'  style={{
+        border:`2px solid black`,
+        margin: `2rem`,
+      }}/>
     )
 })}
     </div>
